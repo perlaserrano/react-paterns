@@ -1,31 +1,31 @@
-import styled from "styled-components"
-import React from "react"
+// import styled from "styled-components"
+// import React from "react"
 
-const Container = styled.div`
-display:flex,
-`
-const Pane = styled.div`
-flex:${props => props.weight};
-`
+// const Container = styled.div`
+// display:flex,
+// `
+// const Pane = styled.div`
+// flex:${props => props.weight};
+// `
 
-export const SplitScreen = ({
-    children,
-    leftWeight =1,
-    rightWeight= 1,
-}) =>{
-   const [left,right] = children;
+// export const SplitScreen = ({
+//     children,
+//     leftWeight =1,
+//     rightWeight= 1,
+// }) =>{
+//    const [left,right] = children;
 
-    return (
-        <Container>
-            <Pane weight={leftWeight}>
-                {left}
-            </Pane>
+//     return (
+//         <Container>
+//             <Pane weight={leftWeight}>
+//                 {left}
+//             </Pane>
 
-            <Pane weight={rightWeight}>
-                {right}
-            </Pane>
-        </Container>
-    )
-}
+//             <Pane weight={rightWeight}>
+//                 {right}
+//             </Pane>
+//         </Container>
+//     )
+// }
 
-export default SplitScreen;
+// export default SplitScreen;

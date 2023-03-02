@@ -7,6 +7,8 @@ import { Wrapper } from "./component5.elements";
 import { IconLogo, IconLogoMobile, MenuItems, MenuItemsLink, NavbarContainer, NavbarWrapper } from "./NavBar.element";
 import { AiFillAliwangwang } from "react-icons/ai";
 import { FaAlignJustify } from "react-icons/fa";
+import { Modal } from "./Modal";
+import { UnControlledForm } from "./UnControlledForm";
 
 
 
@@ -69,8 +71,8 @@ function App() {
       <Button>Enter</Button> */}
     </Wrapper>
    
-     
-
+    <Modal/>
+  <UnControlledForm/>
     </Container>
     
   )  

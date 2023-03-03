@@ -33,24 +33,23 @@ color: black;
 text-align: center;
 `
 
-export const  UnControlledModal = ({children}) => {
-    const [shouldShow, setShouldShow] = useState(false)
-
-    return (
+export const  ControlledModal = ({shouldShow,onRequestClose, children}) => {
+    return shouldShow ? (
         <> 
-        <button onClick={() => setShouldShow(true)}>Show Modal</button>
+        <button onClick={onRequestClose}>Show Modal</button>
         {shouldShow && (
-            <ModalBackground onClick={() => setShouldShow(false)}>
+            <ModalBackground onClick={onRequestClose}>
             <ModalBody onClick={e => e.stopPropagation()}>
-                <button onClick={() => setShouldShow(false)}>Hide Modal</button>
+                {/* <button onClick={onRequesClose}>Hide Modal</button>
                 {children}
                 <ModalText>
                     <p>Hello que tengas bonito dia</p>
-                </ModalText>
+                </ModalText> */}
+                {children}
             </ModalBody>
          </ModalBackground>
         )}
      </>
-    )
+    ) : null;
 
 }
